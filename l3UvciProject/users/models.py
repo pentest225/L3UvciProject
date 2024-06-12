@@ -34,6 +34,14 @@ class Newslatter(models.Model):
     
     
     
-
+class ContactUs(models.Model):
+    name = models.CharField(max_length=15)
+    email = models.EmailField(max_length=254)
+    phone = models.CharField(max_length=15)
+    subject = models.CharField(max_length=255)
+    message = models.TextField()
     
+    create_at = models.DateTimeField(auto_now_add=True)
+    update_at = models.DateTimeField(auto_now=True)
+    delete_at = models.DateTimeField(null=True,blank=True)
     

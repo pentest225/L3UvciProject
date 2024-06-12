@@ -35,6 +35,8 @@ class AppSocialLink(models.Model):
 
 class ContactInfo(models.Model):
     place = models.CharField()
+    latitude = models.FloatField()
+    longitude = models.FloatField()
     email = models.EmailField()
     phone = models.CharField()
     
