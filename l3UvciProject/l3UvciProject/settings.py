@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'frontend.apps.FrontendConfig',
     'users.apps.UsersConfig',
     'orders.apps.OrdersConfig',
-    'products.apps.ProductsConfig'
+    'products.apps.ProductsConfig',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -73,6 +74,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'l3UvciProject.wsgi.application'
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ]
+}
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
